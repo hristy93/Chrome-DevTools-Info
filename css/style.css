@@ -23,7 +23,7 @@ ul#nav{
     z-index: 0;
 	position: fixed;
 	overflow: hidden;
-    margin-top: 110px;
+    margin-top: 42px;
 	display: none;
 	visibility: hidden;
 	
@@ -84,7 +84,7 @@ li a{
 label[for="nav-trigger"] {
 	/* critical positioning styles */
 	position: fixed;
-	left: 2%; top: 75px;
+	left: 2%; top: 10px;
 	z-index: 2;
 	  
 	/* non-critical apperance styles */
@@ -116,16 +116,25 @@ label[for="nav-trigger"] {
 }
 
 .nav-trigger:checked ~ hr{
-	/* left: 50px; */
 	margin-left: 50%;
 	margin-right: 10%;
-	/*  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5); */
+}
+
+.nav-trigger:checked ~ footer{
+	display: block;
+	margin-left: 40%;
 }
 
 .nav-trigger:checked ~ nav > ul#nav{
 	display: block;
 	visibility: visible;
 }
+
+/*
+.nav-trigger:checked ~ header#main{
+	padding-left: 3%;
+}
+*/
 
 body{
 	/* Without this, the body has excess horizontal scroll when the menu is open */
@@ -135,11 +144,10 @@ body{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}
-
-html{
-	overflow-x: hidden;
-	width: 100%;
+}html
+{
+	display: block;
+	overflow-x: hidden !important;
 }
 
 a.top{
@@ -289,7 +297,7 @@ header#main{
 	line-height: 1;
     font-weight: 300;
 	/* padding: 10px 0 10px 20%; */
-	padding: 2% 10% 2% 10%;
+	padding: 1% 10% 1% 10%;
 	text-align: center;
 	position: relative;
 	width: 100%;
@@ -347,6 +355,12 @@ section{
 	z-index: 1;
 }
 
+
+section#about_me{
+	margin-bottom: 5% !important;
+}
+
+
 footer{
 	/* border-top: 1px solid #64b5f6; */
 	border-top: 0.1em solid #64b5f6;
@@ -361,7 +375,7 @@ footer{
 @media (min-width: 400px) {
 	section{
 		margin-right: 5%;
-		margin-left: 15%;
+		margin-left: 17%;
 	}
 	
 	hr{
@@ -380,11 +394,28 @@ footer{
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {	
-
 	header#main{
 		padding-left: 8%;
 	}
+	
+	ul#nav{
+		width: 28%;
+		margin-top: 70px;
+	}
 }
+
+/*
+@media (min-width: 702px) {	
+	header#main{
+		padding-left: 8%;
+	}
+	
+	ul#nav{
+		width: 28%;
+	}
+}
+*/
+
 
 /* Larger than tablet */
 @media (min-width: 750px) {
@@ -398,9 +429,10 @@ footer{
 	}
 	
 	ul#nav{
-		width: 20%;
+		width: 27%;
 		display: block !important;
 		visibility: visible !important;
+	    margin-top: 110px;
 	}
 	
 	label[for="nav-trigger"] {
@@ -442,7 +474,7 @@ footer{
 	}
 	
 	section{
-		margin-left: 30%;
+		margin-left: 33%;
 		margin-right: 5%;
 	}
 	
@@ -464,7 +496,9 @@ footer{
 
 	ul#social_media_links li a{
 		display: inline !important;
+		background-color: white !important;
 	}
+	
 }
 
 /* Larger than desktop */
@@ -497,7 +531,8 @@ footer{
 	}
 	
 	ul#nav{
-		width: 20%;
+		width: 250px;
+		max-width: 250px !important;
 		display: block !important;
 		visibility: visible !important;
 	}
@@ -509,12 +544,12 @@ footer{
 	
 	section{
 		margin-right: 5%;
-		margin-left: 25%;
+		margin-left: 30%;
 	}
 	
 	hr{
 		margin-right: 10%;
-		margin-left: 25%;
+		margin-left: 35%;
 	}
 	
 	header#main{
@@ -537,21 +572,53 @@ footer{
 @media (min-width: 1200px) {
 	section{
 		margin-right: 5%;
+		margin-left: 25%;
+	}
+	
+	hr{
+		margin-right: 5%;
+		margin-left: 30%;
+	}
+	
+	ul#nav{
+		max-width: 20% !important;
+		margin-left: 1%;
+	}
+	
+	header#main{
+		padding-left: 11%;
+	}
+	
+	ul#social_media_links li{
+		display: inline !important;
+		list-style: none;
+		vertical-align: top;
+	}
+
+	ul#social_media_links li a{
+		display: inline !important;
+	}
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1525px) {
+	section{
+		margin-right: 5%;
 		margin-left: 20%;
 	}
 	
 	hr{
-		margin-right: 10%;
-		margin-left: 20%;
+		margin-right: 5%;
+		margin-left:25%;
 	}
 	
 	ul#nav{
-		width: 17%;
-		margin-left: 
+		max-width: 20% !important;
+		margin-left: 1%;
 	}
 	
 	header#main{
-		padding-left: 9%;
+		padding-left: 11%;
 	}
 	
 	ul#social_media_links li{
