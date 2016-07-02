@@ -14,7 +14,7 @@ ul#nev {
 
 ul#nav{
   /* critical sizing and position styles */
-	width: 28%; 
+	width: 35%; 
     height: 100%;
     top: 0;
     right: 0;
@@ -102,6 +102,7 @@ label[for="nav-trigger"] {
 
 .nav-trigger:checked + label {
 	/* left: 65px; */
+	/* left:  25%; */
 	left: 25%;
 }
 
@@ -144,10 +145,13 @@ body{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}html
-{
+	font-size: 1em;
+}
+
+html{
 	display: block;
 	overflow-x: hidden !important;
+	font-size: 95%;
 }
 
 a.top{
@@ -395,7 +399,7 @@ footer{
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {	
 	header#main{
-		padding-left: 8%;
+		padding-left: 7%;
 	}
 	
 	ul#nav{
@@ -484,7 +488,7 @@ footer{
 	}
 	
 	header#main{
-		padding-left: 14%;
+		padding-left: 15%;
 	}
 	
 	ul#social_media_links li{
@@ -553,7 +557,7 @@ footer{
 	}
 	
 	header#main{
-		padding-left: 11%;
+		padding-left: 14%;
 	}
 	
 	ul#social_media_links li{
@@ -618,7 +622,7 @@ footer{
 	}
 	
 	header#main{
-		padding-left: 11%;
+		padding-left: 9%;
 	}
 	
 	ul#social_media_links li{
