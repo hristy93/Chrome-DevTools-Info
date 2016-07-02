@@ -14,7 +14,8 @@ ul#nev {
 
 ul#nav{
   /* critical sizing and position styles */
-	width: 28%; 
+	/* width: 35%;  */
+	width: 225px; 
     height: 100%;
     top: 0;
     right: 0;
@@ -23,7 +24,7 @@ ul#nav{
     z-index: 0;
 	position: fixed;
 	overflow: hidden;
-    margin-top: 42px;
+    margin-top: 90px;
 	display: none;
 	visibility: hidden;
 	
@@ -86,6 +87,7 @@ label[for="nav-trigger"] {
 	position: fixed;
 	left: 2%; top: 10px;
 	z-index: 2;
+	margin-top: 45px;
 	  
 	/* non-critical apperance styles */
 	height: 30px;
@@ -102,7 +104,8 @@ label[for="nav-trigger"] {
 
 .nav-trigger:checked + label {
 	/* left: 65px; */
-	left: 25%;
+	/* left: 25%; */
+	left: 225px;
 }
 
 label[for="nav-trigger"] {
@@ -111,18 +114,20 @@ label[for="nav-trigger"] {
 
 .nav-trigger:checked ~ section{
 	/* left: 50px; */
-	left: 20%;
+	/* left: 20%; */
+	left: 225px;
 	/*  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5); */
 }
 
 .nav-trigger:checked ~ hr{
-	margin-left: 50%;
-	margin-right: 10%;
+	/* margin-left: 50%; */
+	margin-left: 375px;
+	/* margin-right: 10%; */
 }
 
 .nav-trigger:checked ~ footer{
 	display: block;
-	margin-left: 40%;
+	/* margin-left: 40%; */
 }
 
 .nav-trigger:checked ~ nav > ul#nav{
@@ -144,10 +149,13 @@ body{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}html
+}
+
+html
 {
 	display: block;
 	overflow-x: hidden !important;
+	font-size: 95%;
 }
 
 a.top{
@@ -375,33 +383,40 @@ footer{
 @media (min-width: 400px) {
 	section{
 		margin-right: 5%;
-		margin-left: 17%;
+		margin-left: 12%;
 	}
 	
 	hr{
 		margin-right: 5%;
-		margin-left: 15%;
+		margin-left: 14%;
 	}
 	
 	ul#nav{
-		width: 25%;
+		/* width: 25%; */
+		width: 225px;
+		margin-top: 90px;
 	}
 	
 	header#main{
 		padding-left: 6%;
 	}
+	
+	html { font-size: 90%;}
 }
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {	
 	header#main{
-		padding-left: 8%;
+		padding-left: 4%;
 	}
 	
 	ul#nav{
-		width: 28%;
-		margin-top: 70px;
+		/* width: 28%; */
+		width: 225px;
+		margin-top: 90px;
 	}
+	
+	html { font-size: 90%;}
 }
 
 /*
@@ -553,7 +568,7 @@ footer{
 	}
 	
 	header#main{
-		padding-left: 11%;
+		padding-left: 14%;
 	}
 	
 	ul#social_media_links li{
@@ -609,7 +624,7 @@ footer{
 	
 	hr{
 		margin-right: 5%;
-		margin-left:25%;
+		margin-left: 25%;
 	}
 	
 	ul#nav{
@@ -618,7 +633,7 @@ footer{
 	}
 	
 	header#main{
-		padding-left: 11%;
+		padding-left: 9%;
 	}
 	
 	ul#social_media_links li{
