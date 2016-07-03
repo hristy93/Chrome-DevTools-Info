@@ -15,7 +15,7 @@ ul#nev {
 ul#nav{
   /* critical sizing and position styles */
 	/* width: 35%;  */
-	width: 225px; 
+	width: 35%; 
     height: 100%;
     top: 0;
     right: 0;
@@ -23,11 +23,11 @@ ul#nav{
     left: 0;
     z-index: 0;
 	position: fixed;
-	overflow: hidden;
+	
     margin-top: 90px;
 	display: none;
 	visibility: hidden;
-	
+    overflow-x: scroll; 
 	/* non-critical appearance styles */
 	list-style: none;
 }
@@ -98,14 +98,15 @@ label[for="nav-trigger"] {
 }
 
 /* Make the Magic Happen */
-.nav-trigger + label, section {
+.nav-trigger + label, section{
+	-webkit-transition: left 0.2s;
 	transition: left 0.2s;
 }
 
 .nav-trigger:checked + label {
 	/* left: 65px; */
 	/* left: 25%; */
-	left: 225px;
+	left: 25%;
 }
 
 label[for="nav-trigger"] {
@@ -115,19 +116,21 @@ label[for="nav-trigger"] {
 .nav-trigger:checked ~ section{
 	/* left: 50px; */
 	/* left: 20%; */
-	left: 225px;
+	left: 25%;
 	/*  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5); */
 }
 
 .nav-trigger:checked ~ hr{
+	display: block;
 	/* margin-left: 50%; */
-	margin-left: 375px;
+	margin-left: 60%;
 	/* margin-right: 10%; */
 }
 
 .nav-trigger:checked ~ footer{
 	display: block;
 	/* margin-left: 40%; */
+	margin-left: 45%;
 }
 
 .nav-trigger:checked ~ nav > ul#nav{
@@ -155,7 +158,7 @@ html
 {
 	display: block;
 	overflow-x: hidden !important;
-	font-size: 95%;
+	font-size: 90%;
 }
 
 a.top{
@@ -402,6 +405,45 @@ footer{
 	}
 	
 	html { font-size: 90%;}
+	
+	* Make the Magic Happen */
+	.nav-trigger + label, section {
+		transition: left 0.2s;
+	}
+
+	.nav-trigger:checked + label {
+		/* left: 65px; */
+		/* left: 25%; */
+		left: 225px;
+	}
+
+	label[for="nav-trigger"] {
+		margin-left: 2%;
+	}
+
+	.nav-trigger:checked ~ section{
+		/* left: 50px; */
+		/* left: 20%; */
+		left: 225px;
+		/*  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5); */
+	}
+
+	.nav-trigger:checked ~ hr{
+		/* margin-left: 50%; */
+		margin-left: 375px;
+		/* margin-right: 10%; */
+	}
+
+	.nav-trigger:checked ~ footer{
+		display: block;
+		/* margin-left: 40%; */
+		margin-left: 310px;
+	}
+
+	.nav-trigger:checked ~ nav > ul#nav{
+		display: block;
+		visibility: visible;
+	}
 }
 
 /* Larger than phablet (also point when grid becomes active) */
@@ -417,6 +459,45 @@ footer{
 	}
 	
 	html { font-size: 90%;}
+	
+	* Make the Magic Happen */
+	.nav-trigger + label, section {
+		transition: left 0.2s;
+	}
+
+	.nav-trigger:checked + label {
+		/* left: 65px; */
+		/* left: 25%; */
+		left: 225px;
+	}
+
+	label[for="nav-trigger"] {
+		margin-left: 2%;
+	}
+
+	.nav-trigger:checked ~ section{
+		/* left: 50px; */
+		/* left: 20%; */
+		left: 225px;
+		/*  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5); */
+	}
+
+	.nav-trigger:checked ~ hr{
+		/* margin-left: 50%; */
+		margin-left: 375px;
+		/* margin-right: 10%; */
+	}
+
+	.nav-trigger:checked ~ footer{
+		display: block;
+		/* margin-left: 40%; */
+		margin-left: 310px;
+	}
+
+	.nav-trigger:checked ~ nav > ul#nav{
+		display: block;
+		visibility: visible;
+	}
 }
 
 /*
