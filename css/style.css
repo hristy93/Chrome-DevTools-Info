@@ -526,11 +526,12 @@ footer{
 		display: block;
 	} */
 	
-	
+	/*
 	figure, img.profile_image, img.small_image, img.medium_image, img.small_image + figcaption,  img.medium_image + figcaption{
 		display: block !important;
 		visibility: visible !important;
 	}
+	*/
 	
 	ul#nav{
 		width: 27%;
