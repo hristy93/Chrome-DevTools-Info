@@ -14,6 +14,7 @@ ul#nev {
 
 ul#nav{
   /* critical sizing and position styles */
+	/* width: 35%;  */
 	width: 35%; 
     height: 100%;
     top: 0;
@@ -22,11 +23,11 @@ ul#nav{
     left: 0;
     z-index: 0;
 	position: fixed;
-	overflow: hidden;
-    margin-top: 42px;
+	
+    margin-top: 90px;
 	display: none;
 	visibility: hidden;
-	
+    overflow-x: scroll; 
 	/* non-critical appearance styles */
 	list-style: none;
 }
@@ -44,7 +45,8 @@ li a {
 	/* border-bottom: 0.1em solid rgb(195, 195, 195); */
     text-decoration: none;
 	/* margin-left: 20%; */
-	font-family: cursive;
+	/* font-family: cursive; */
+	font-family: Verdana;
 	text-align: center;
 	font-size: 1.2em;
 }
@@ -86,6 +88,7 @@ label[for="nav-trigger"] {
 	position: fixed;
 	left: 2%; top: 10px;
 	z-index: 2;
+	margin-top: 45px;
 	  
 	/* non-critical apperance styles */
 	height: 30px;
@@ -96,13 +99,17 @@ label[for="nav-trigger"] {
 }
 
 /* Make the Magic Happen */
-.nav-trigger + label, section {
+.nav-trigger + label, section{
+	-webkit-transition: left 0.2s;
+	-moz-transition: left 0.2s;
+	-o-transition: left 0.2s;
+	-ms-transition: left 0.2s;
 	transition: left 0.2s;
 }
 
 .nav-trigger:checked + label {
 	/* left: 65px; */
-	/* left:  25%; */
+	/* left: 25%; */
 	left: 25%;
 }
 
@@ -112,18 +119,22 @@ label[for="nav-trigger"] {
 
 .nav-trigger:checked ~ section{
 	/* left: 50px; */
-	left: 20%;
+	/* left: 20%; */
+	left: 30%;
 	/*  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5); */
 }
 
 .nav-trigger:checked ~ hr{
-	margin-left: 50%;
-	margin-right: 10%;
+	display: block;
+	/* margin-left: 50%; */
+	margin-left: 60%;
+	/* margin-right: 10%; */
 }
 
 .nav-trigger:checked ~ footer{
 	display: block;
-	margin-left: 40%;
+	/* margin-left: 40%; */
+	margin-left: 45%;
 }
 
 .nav-trigger:checked ~ nav > ul#nav{
@@ -145,13 +156,13 @@ body{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-	font-size: 1em;
 }
 
-html{
+html
+{
 	display: block;
 	overflow-x: hidden !important;
-	font-size: 95%;
+	font-size: 90%;
 }
 
 a.top{
@@ -204,7 +215,7 @@ p.title, p.subtitle{
 	/* margin: 10px 0 10px 0; */
 	margin: 1% 0 1% 0;
 	font-weight: bold;
-	text-align: left !important;
+	text-align: center;
 	color: #64b5f6;
 }
 
@@ -228,7 +239,8 @@ p::first-letter{
 
 div.shortcut{
 	font-size: 1.3em;
-    font-family: monospace;
+    /* font-family: monospace; */
+    font-family: Verdana;
 	display: inline;
 }
 
@@ -265,8 +277,8 @@ img.long_image{
 img.small_image{
 	/* width: 30px; 
 	height: 30px; */
-	width: 5%; 
-	height: 5%;
+	width: 3%; 
+	height: 3%;
 	display: inline-block !important;
 	margin: 0 !important;
 	box-shadow: none !important;
@@ -301,7 +313,7 @@ header#main{
 	line-height: 1;
     font-weight: 300;
 	/* padding: 10px 0 10px 20%; */
-	padding: 1% 10% 1% 10%;
+	padding: 1% 10% 1% 5%;
 	text-align: center;
 	position: relative;
 	width: 100%;
@@ -348,14 +360,15 @@ figcaption{
 section{
 	position: relative;
 	/* margin: 10px 8% 10px 28%; */
-	margin: 1% 8% 1% 28%;
+	margin: 3% 8% 1% 20%;
     height: 100%;
-/* 	min-height: 100%;
+    /* min-height: 100%;
 	min-width: 100%; */
 	background-color: white; 
 	padding-left: 2%;
 	padding-right: 2%;
-	font-family: cursive;
+	/* font-family: Cursive; */
+	font-family: Verdana;
 	z-index: 1;
 }
 
@@ -372,40 +385,128 @@ footer{
 	/* padding: 10px; */
 	padding: 1%;
 	text-align: center;
-	font-family: verdana;
+	/* font-family: verdana; */
+	font-family: Verdana;
 }
 
 /* Larger than mobile */
 @media (min-width: 400px) {
 	section{
 		margin-right: 5%;
-		margin-left: 17%;
+		margin-left: 12%;
 	}
 	
 	hr{
 		margin-right: 5%;
-		margin-left: 15%;
+		margin-left: 14%;
 	}
 	
 	ul#nav{
-		width: 25%;
+		/* width: 25%; */
+		width: 225px;
+		margin-top: 90px;
 	}
 	
 	header#main{
 		padding-left: 6%;
+	}
+	
+	html { font-size: 90%;}
+	
+	/* Make the Magic Happen */
+	.nav-trigger + label, section {
+		transition: left 0.2s;
+	}
+
+	.nav-trigger:checked + label {
+		/* left: 65px; */
+		/* left: 25%; */
+		left: 225px;
+	}
+
+	label[for="nav-trigger"] {
+		margin-left: 2%;
+	}
+
+	.nav-trigger:checked ~ section{
+		/* left: 50px; */
+		/* left: 20%; */
+		left: 225px;
+		/*  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5); */
+	}
+
+	.nav-trigger:checked ~ hr{
+		/* margin-left: 50%; */
+		margin-left: 375px;
+		/* margin-right: 10%; */
+	}
+
+	.nav-trigger:checked ~ footer{
+		display: block;
+		/* margin-left: 40%; */
+		margin-left: 310px;
+	}
+
+	.nav-trigger:checked ~ nav > ul#nav{
+		display: block;
+		visibility: visible;
 	}
 }
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {	
 	header#main{
-		padding-left: 7%;
+		padding-left: 4%;
 	}
 	
 	ul#nav{
-		width: 28%;
-		margin-top: 70px;
+		/* width: 28%; */
+		width: 225px;
+		margin-top: 90px;
 	}
+	
+	html { font-size: 90%;}
+	
+	/* Make the Magic Happen */
+	.nav-trigger + label, section {
+		transition: left 0.2s;
+	}
+
+	.nav-trigger:checked + label {
+		/* left: 65px; */
+		/* left: 25%; */
+		left: 225px;
+	}
+
+	label[for="nav-trigger"] {
+		margin-left: 2%;
+	}
+
+	.nav-trigger:checked ~ section{
+		/* left: 50px; */
+		/* left: 20%; */
+		left: 225px;
+		/*  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5); */
+	}
+
+	.nav-trigger:checked ~ hr{
+		/* margin-left: 50%; */
+		margin-left: 375px;
+		/* margin-right: 10%; */
+	}
+
+	.nav-trigger:checked ~ footer{
+		display: block;
+		/* margin-left: 40%; */
+		margin-left: 310px;
+	}
+
+	.nav-trigger:checked ~ nav > ul#nav{
+		display: block;
+		visibility: visible;
+	}
+	
+	p.title, p.subtitle{text-align: left;}
 }
 
 /*
@@ -423,14 +524,18 @@ footer{
 
 /* Larger than tablet */
 @media (min-width: 750px) {
-/* 	ul#nav{
+	
+    /* 	ul#nav{
 		float: left;
 		display: block;
 	} */
-	img, figure, figcaption{
+	
+	/*
+	figure, img.profile_image, img.small_image, img.medium_image, img.small_image + figcaption,  img.medium_image + figcaption{
 		display: block !important;
 		visibility: visible !important;
 	}
+	*/
 	
 	ul#nav{
 		width: 27%;
@@ -468,8 +573,8 @@ footer{
 	img.small_image{
 		/* width: 30px; 
 		height: 30px; */
-		width: 5%; 
-		height: 5%;
+		width: 3%; 
+		height: 3%;
 	}
 	
 	a.top{
@@ -488,7 +593,7 @@ footer{
 	}
 	
 	header#main{
-		padding-left: 15%;
+		padding-left: 14%;
 	}
 	
 	ul#social_media_links li{
@@ -570,6 +675,8 @@ footer{
 	ul#social_media_links li a{
 		display: inline !important;
 	}
+	
+	body{font-size: 105%;}
 }
 
 /* Larger than Desktop HD */
@@ -602,6 +709,8 @@ footer{
 	ul#social_media_links li a{
 		display: inline !important;
 	}
+	
+	body{font-size: 110%;}
 }
 
 /* Larger than Desktop HD */
@@ -613,7 +722,7 @@ footer{
 	
 	hr{
 		margin-right: 5%;
-		margin-left:25%;
+		margin-left: 25%;
 	}
 	
 	ul#nav{
@@ -634,4 +743,6 @@ footer{
 	ul#social_media_links li a{
 		display: inline !important;
 	}
+	
+	body{font-size: 115%;}
 }
